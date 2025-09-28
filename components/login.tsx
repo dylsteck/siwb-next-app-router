@@ -8,6 +8,7 @@ import { useAccount, useConnect, useSignMessage } from "wagmi";
 import { useMiniAppContext } from "./mini-app-provider";
 import ViewAsMiniapp from "./view-as-miniapp";
 import { SharedContent } from "./shared-content";
+import { SiweMessage } from "siwe";
 
 export default function Login() {
   return (
@@ -49,15 +50,25 @@ function Content() {
         walletAddress = result.accounts[0];
       }
 
-      const siweMessage = `Sign in with Ethereum\n\nURI: ${window.location.origin}\nVersion: 1\nChain ID: 8453\nNonce: ${nonce}`;
+      const siweMessage = new SiweMessage({
+        domain: window.location.host,
+        address: walletAddress,
+        statement: "Sign in with Ethereum to the app.",
+        uri: window.location.origin,
+        version: "1",
+        chainId: 8453, // Base mainnet
+        nonce: nonce,
+      });
+
+      const messageToSign = siweMessage.prepareMessage();
       
       const signature = await signMessageAsync({
-        message: siweMessage,
+        message: messageToSign,
       });
 
       await signIn("base", {
         address: walletAddress,
-        message: siweMessage,
+        message: messageToSign,
         signature,
         nonce,
         redirect: false,
