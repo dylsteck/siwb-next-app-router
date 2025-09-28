@@ -1,6 +1,6 @@
 "use client";
 
-import { QRCode } from "@farcaster/auth-kit";
+import { Cuer } from "cuer";
 import { useEffect, useState } from "react";
 
 interface ViewAsMiniappProps {
@@ -16,13 +16,13 @@ export default function ViewAsMiniapp({ client = "base" }: ViewAsMiniappProps) {
     }
   }, []);
 
-  const url = currentUrl || process.env.NEXT_PUBLIC_URL || 'https://siwf-next-app-router.vercel.app';
+  const url = currentUrl || process.env.NEXT_PUBLIC_URL || 'https://siwb-next-app-router.vercel.app';
 
   const baseMiniappUrl = `cbwallet://miniapp?url=${encodeURIComponent(url)}`;
 
   return (
     <div>
-      <QRCode uri={baseMiniappUrl} size={200} />
+      <Cuer value={baseMiniappUrl} />
     </div>
   );
 }

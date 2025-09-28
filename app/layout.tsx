@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "siwf-next-app-router",
-  description: "Sign In with Farcaster x Next.js App Router x NextAuth Demo",
+  title: "siwb-next-app-router",
+  description: "Sign In with Base x Next.js App Router x NextAuth Demo",
 };
 
 export default function RootLayout({
