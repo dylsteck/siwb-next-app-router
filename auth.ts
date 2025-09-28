@@ -21,8 +21,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const verifyResponse = await appClient.verifySignInMessage({
           message: credentials?.message as string,
           signature: credentials?.signature as `0x${string}`,
-          domain: "example.com",
+          domain: "siwf-next-app-router.vercel.app",
           nonce: credentials.csrfToken as string,
+          acceptAuthAddress: true
         });
         const { success, fid } = verifyResponse;
 
