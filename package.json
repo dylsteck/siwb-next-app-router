@@ -1,11 +1,11 @@
 {
-  "name": "siwf-next-app-router",
+  "name": "siwb-next-app-router",
   "author": "dylsteck",
   "version": "0.0.1",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/dylsteck/siwf-next-app-router"
+    "url": "https://github.com/dylsteck/siwb-next-app-router"
   },
   "scripts": {
     "dev": "next dev --turbo",
