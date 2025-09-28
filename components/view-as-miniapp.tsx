@@ -18,11 +18,11 @@ export default function ViewAsMiniapp({ client = "base" }: ViewAsMiniappProps) {
 
   const url = currentUrl || process.env.NEXT_PUBLIC_URL || 'https://siwf-next-app-router.vercel.app';
 
-  const miniappUrl = `cbwallet://miniapp?url=${encodeURIComponent(url)}`;
+  const baseMiniappUrl = `cbwallet://miniapp?url=${encodeURIComponent(url)}`;
 
   return (
     <div>
-      <QRCode uri={miniappUrl} size={200} />
+      <QRCode uri={baseMiniappUrl} size={200} />
     </div>
   );
 }

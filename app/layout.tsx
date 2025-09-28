@@ -11,9 +11,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }): React.ReactElement {
   return (
-    <html lang="en">
-      <body>
-          {children}
+    <html lang="en" style={{ backgroundColor: '#ffffff' }}>
+      <body 
+        style={{ 
+          backgroundColor: '#ffffff', 
+          color: '#000000',
+          margin: 0,
+          padding: 0,
+          minHeight: '100vh'
+        }}
+      >
+        {children}
       </body>
     </html>
   );
