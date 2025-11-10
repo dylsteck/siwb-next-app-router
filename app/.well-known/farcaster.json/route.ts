@@ -14,7 +14,7 @@ export async function GET(request: Request) {
         "miniapp": {
           "version": "1",
           "name": "Test Mini App",
-          "homeUrl": "https://test.com",
+          "homeUrl": "https://siwb-next-app-router-lemon.vercel.app",
           "iconUrl": "https://test.com/i.png",
           "splashImageUrl": "https://test.com/l.png",
           "splashBackgroundColor": "#000000",
