@@ -26,7 +26,7 @@ export async function GET(request: Request) {
             "https://test.com/s2.png",
             "https://test.com/s3.png"
           ],
-          "primaryCategory": "test",
+          "primaryCategory": "utility",
           "tags": ["utility"],
           "heroImageUrl": "https://test.com/og.png",
           "tagline": "Save instantly",
