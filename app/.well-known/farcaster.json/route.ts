@@ -4,9 +4,9 @@ export async function GET(request: Request) {
   return NextResponse.json(
     {
         "accountAssociation": {
-            "header": "eyJmaWQiOjkxNTIsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgwMmVmNzkwRGQ3OTkzQTM1ZkQ4NDdDMDUzRURkQUU5NDBEMDU1NTk2In0",
-            "payload": "eyJkb21haW4iOiJhcHAuZXhhbXBsZS5jb20ifQ",
-            "signature": "MHgxMGQwZGU4ZGYwZDUwZTdmMGIxN2YxMTU2NDI1MjRmZTY0MTUyZGU4ZGU1MWU0MThiYjU4ZjVmZmQxYjRjNDBiNGVlZTRhNDcwNmVmNjhlMzQ0ZGQ5MDBkYmQyMmNlMmVlZGY5ZGQ0N2JlNWRmNzMwYzUxNjE4OWVjZDJjY2Y0MDFj"
+            "header": "eyJmaWQiOjE0NDA3MTYsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHg4MzJlMjJFOEM0REQwNjZmNTdDMzA4N2NDNzcxNWExNzdiOTEyNEVmIn0",
+            "payload": "eyJkb21haW4iOiJzaXdiLW5leHQtYXBwLXJvdXRlci1sZW1vbi52ZXJjZWwuYXBwIn0",
+            "signature": "WnE1poIzOtGI1UPsYOASUGMmWnRBv2JU4x0g8AVpQB986jm3A8x6HC+pbyAuL3g0424RqlVRY2k6JywqcT4QIxw="
           },
         "baseBuilder": {
           "ownerAddress": "0x..." 
@@ -38,3 +38,4 @@ export async function GET(request: Request) {
     
   });
 }
+
