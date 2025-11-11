@@ -6,7 +6,7 @@ import { useCallback, useState, useEffect } from "react";
 import { SignInWithBaseButton } from "@base-org/account-ui/react";
 import { useAccount, useConnect, useSignMessage } from "wagmi";
 import { useMiniAppContext } from "./mini-app-provider";
-import ViewAsMiniapp from "./view-as-miniapp";
+import ViewAsMiniApp from "./view-as-miniapp";
 import { SharedContent } from "./shared-content";
 import { SiweMessage } from "siwe";
 
@@ -111,7 +111,7 @@ function Content() {
         {!isInMiniApp && (
           <div style={{ marginTop: "20px" }}>
             <h3 style={{ marginBottom: "16px" }}>Test on Base</h3>
-            <ViewAsMiniapp />
+            <ViewAsMiniApp />
           </div>
         )}
       </div>

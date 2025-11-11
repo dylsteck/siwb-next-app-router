@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { APP_URL } from "../constants";
+
 
 export const metadata: Metadata = {
   title: "siwb-next-app-router",
@@ -6,14 +8,14 @@ export const metadata: Metadata = {
   other: {
     "fc:miniapp": JSON.stringify({
       version: "1",
-      imageUrl: "https://siwb-next-app-router-lemon.vercel.app/og.png",
+      imageUrl: `${APP_URL}/og.png`,
       button: {
         title: "Open App",
         action: {
           type: "launch_miniapp",
           name: "Open",
-          url: "https://siwb-next-app-router-lemon.vercel.app",
-          splashImageUrl: "https://siwb-next-app-router-lemon.vercel.app/og.png",
+          url: APP_URL,
+          splashImageUrl: `${APP_URL}/og.png`,
           splashBackgroundColor: "#f5f0ec"
         }
       }

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { APP_URL } from "../../../constants";
 
 export async function GET(request: Request) {
   return NextResponse.json(
@@ -7,32 +8,23 @@ export async function GET(request: Request) {
             "header": "eyJmaWQiOjE0NDA3MTYsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHg4MzJlMjJFOEM0REQwNjZmNTdDMzA4N2NDNzcxNWExNzdiOTEyNEVmIn0",
             "payload": "eyJkb21haW4iOiJzaXdiLW5leHQtYXBwLXJvdXRlci1sZW1vbi52ZXJjZWwuYXBwIn0",
             "signature": "WnE1poIzOtGI1UPsYOASUGMmWnRBv2JU4x0g8AVpQB986jm3A8x6HC+pbyAuL3g0424RqlVRY2k6JywqcT4QIxw="
-          },
-        "baseBuilder": {
-          "ownerAddress": "0x..." 
         },
         "miniapp": {
           "version": "1",
-          "name": "Test Mini App",
-          "homeUrl": "https://siwb-next-app-router-lemon.vercel.app",
-          "iconUrl": "https://siwb-next-app-router-lemon.vercel.app/icon.png",
-          "splashImageUrl": "https://siwb-next-app-router-lemon.vercel.app/icon.png",
+          "name": "SIWB Test Mini App",
+          "homeUrl": APP_URL,
+          "iconUrl": `${APP_URL}/icon.png`,
+          "splashImageUrl": `${APP_URL}/icon.png`,
           "splashBackgroundColor": "#000000",
-          "webhookUrl": "https://test.com/api/webhook",
-          "subtitle": "Easy to manage",
-          "description": "Test Mini App",
-          "screenshotUrls": [
-            "https://test.com/s1.png",
-            "https://test.com/s2.png",
-            "https://test.com/s3.png"
-          ],
+          "subtitle": "SIWB Test Mini App",
+          "description": "SIWB Test App",
           "primaryCategory": 'utility',
           "tags": ["utility"],
-          "heroImageUrl": "https://test.com/og.png",
-          "tagline": "Save instantly",
-          "ogTitle": "Test Mini App",
-          "ogDescription": "Test Mini App",
-          "ogImageUrl": "https://test.com/og.png",
+          "heroImageUrl": `${APP_URL}/og.png`,
+          "tagline": "SIWB Test Mini App",
+          "ogTitle": "SIWB Test Mini App",
+          "ogDescription": "SIWB Test Mini App",
+          "ogImageUrl": `${APP_URL}/og.png`,
           "noindex": true
         }
     
